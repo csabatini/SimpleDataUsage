@@ -1,0 +1,40 @@
+Applications Memory Usage (kB):
+Uptime: 54350704 Realtime: 106376397
+
+** MEMINFO in pid 3308 [com.slickmobile.simpledatausage] **
+                   Pss  Private  Private  Swapped     Heap     Heap     Heap
+                 Total    Dirty    Clean    Dirty     Size    Alloc     Free
+                ------   ------   ------   ------   ------   ------   ------
+  Native Heap     4514     4420        0        0    16384    10230     6153
+  Dalvik Heap     3603     3320        0        0    49867    18054    31813
+ Dalvik Other      780      780        0        0                           
+        Stack      160      160        0        0                           
+       Cursor      168      168        0        0                           
+    Other dev     1609     1600        8        0                           
+     .so mmap     1595      332      152        0                           
+    .apk mmap      175        0       24        0                           
+    .ttf mmap       31        0       24        0                           
+    .dex mmap     2400        0     2400        0                           
+    code mmap      820        0       64        0                           
+   image mmap     1277      952       32        0                           
+   Other mmap        8        4        0        0                           
+     Graphics    13888    13888        0        0                           
+           GL     2188     2188        0        0                           
+      Unknown       32       32        0        0                           
+        TOTAL    33248    27844     2704        0    66251    28284    37966
+ 
+ Objects
+               Views:       19         ViewRootImpl:        1
+         AppContexts:        4           Activities:        1
+              Assets:        3        AssetManagers:        3
+       Local Binders:        8        Proxy Binders:       19
+    Death Recipients:        0
+     OpenSSL Sockets:        0
+ 
+ SQL
+         MEMORY_USED:      101
+  PAGECACHE_OVERFLOW:       24          MALLOC_SIZE:       62
+ 
+ DATABASES
+      pgsz     dbsz   Lookaside(b)          cache  Dbname
+         4       20             26       669/18/4  /data/data/com.slickmobile.simpledatausage/databases/usage.db
