@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
 
 android {
-    compileSdkVersion 23
-    buildToolsVersion "23.0.0"
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
 
     defaultConfig {
         applicationId "com.slickmobile.simpledatausage"
         minSdkVersion 16
-        targetSdkVersion 23
+        targetSdkVersion 21
         versionCode 1
         versionName "1.0"
     }
@@ -23,11 +23,10 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.android.support:appcompat-v7:23.0.0'
-    compile 'com.android.support:recyclerview-v7:23.0.0'
-    compile 'com.android.support:cardview-v7:23.0.0'
-    compile 'com.android.support:design:23.0.0'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.android.support:recyclerview-v7:21.0.3'
+    compile 'com.android.support:cardview-v7:21.0.3'
     compile 'io.reactivex:rxjava:1.0.14'
     compile 'io.reactivex:rxandroid:1.0.1'
     compile 'com.google.dagger:dagger:2.0.1'
@@ -38,8 +37,11 @@ dependencies {
     compile 'com.squareup.sqlbrite:sqlbrite:0.2.1'
     compile 'net.danlew:android.joda:2.8.2'
     debugCompile 'com.squareup.leakcanary:leakcanary-android:1.3.1'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
     releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.3.1'
     testCompile 'org.mockito:mockito-core:1.9.5'
     testCompile 'junit:junit:4.12'
-    testCompile 'com.squareup:fest-android:1.0.8'
+    // Conflict between squareup:fest and robolectric
+    //testCompile 'com.squareup:fest-android:1.0.8'
+    testCompile "org.robolectric:robolectric:3.0"
 }

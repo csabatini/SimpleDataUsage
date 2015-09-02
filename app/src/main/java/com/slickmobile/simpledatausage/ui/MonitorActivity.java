@@ -2,7 +2,7 @@ package com.slickmobile.simpledatausage.ui;
 
 import android.content.pm.ApplicationInfo;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.ActionBarActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -12,7 +12,7 @@ import com.slickmobile.simpledatausage.R;
 import java.util.Collections;
 import java.util.List;
 
-public class MonitorActivity extends AppCompatActivity {
+public class MonitorActivity extends ActionBarActivity {
 
     private RecyclerView recycler;
     private List<ApplicationInfo> apps = Collections.emptyList();

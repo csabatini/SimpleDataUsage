@@ -20,7 +20,7 @@ public class App extends Application {
         super.onCreate();
         setupGraph();
         JodaTimeAndroid.init(this);
-        LeakCanary.install(this);
+        //LeakCanary.install(this);
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
         }
