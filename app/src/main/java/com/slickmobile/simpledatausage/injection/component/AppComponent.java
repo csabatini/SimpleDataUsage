@@ -3,6 +3,7 @@ package com.slickmobile.simpledatausage.injection.component;
 import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.SharedPreferences;
 
 import com.slickmobile.simpledatausage.injection.module.AppModule;
 import com.slickmobile.simpledatausage.injection.module.DbModule;
@@ -20,12 +21,12 @@ import dagger.Component;
 @Singleton
 @Component(modules = {AppModule.class, DbModule.class})
 public interface AppComponent {
-    void inject(MainActivity activity);
     void inject(CollectUsageService service);
     void inject(SummaryFragment fragment);
     Context context();
     AppSchedulers schedulers();
     BriteDatabase database();
+    SharedPreferences prefs();
     AlarmManager alarmManager();
     NotificationManager notificationManager();
     ByteFormatter formatter();

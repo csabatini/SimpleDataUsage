@@ -3,6 +3,8 @@ package com.slickmobile.simpledatausage.injection.module;
 import android.app.AlarmManager;
 import android.app.NotificationManager;
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 
 import com.slickmobile.simpledatausage.App;
 import com.slickmobile.simpledatausage.rx.AppSchedulers;
@@ -26,6 +28,12 @@ public class AppModule {
     @Singleton
     public Context provideAppContext(){
         return this.app;
+    }
+
+    @Provides
+    @Singleton
+    public SharedPreferences provideSharedPrefs() {
+        return PreferenceManager.getDefaultSharedPreferences(app);
     }
 
     @Provides

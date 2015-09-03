@@ -17,6 +17,7 @@ public abstract class BaseActivity extends ActionBarActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        setupGraph(getAppComponent(), getActivityModule());
         setContentView(getLayoutId());
         initializeToolbar();
     }
@@ -37,6 +38,8 @@ public abstract class BaseActivity extends ActionBarActivity {
     }
 
     protected abstract int getLayoutId();
+
+    protected abstract void setupGraph(AppComponent appComponent, ActivityModule activityModule);
 
     private void initializeToolbar() {
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
